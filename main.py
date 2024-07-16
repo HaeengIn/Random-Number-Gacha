@@ -1,6 +1,7 @@
 # 모듈 임포트
 import random as ran
 import webbrowser as web
+import time
 
 # 변수 선언
 student = 0
@@ -44,6 +45,8 @@ def main():
         c = input("Exit Program?(y/n) ")
         if c == "y":
             print("Program Stopped")
+            print("Window will be shut in 5 seconds")
+            time.sleep(5)
             exit()
         if c == "n":
             main()
@@ -208,6 +211,8 @@ def main_kor():
         c = input("프로그램을 종료할까요?(예/아니오) ")
         if c == "예":
             print("종료되었습니다.")
+            print('창이 5초 후에 닫힙니다.')
+            time.sleep(5)
             exit()
         if c == "아니오":
             main_kor()
