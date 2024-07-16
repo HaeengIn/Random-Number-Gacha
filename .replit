@@ -1,0 +1,6 @@
+modules = ["python-3.12"]
+entrypoint = "main.py"
+language = "Python"
+
+[nix]
+channel = "stable-24_05"
