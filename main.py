@@ -150,7 +150,7 @@ def again_stream_kor():
     if restart == "아니오":
         main_kor()
     else:
-        print('Invalid Input')
+        print('잘못된 입력값입니다.')
         again_stream_kor()
 
 # 랜덤 뽑기 실행
@@ -192,7 +192,13 @@ def stream_kor():
             repeat = int(input("몇 번 뽑을까요? "))
             for x in range(repeat):
                 num = ran.randint(1, student)
-                print(num)
+                repeat_result.append(num)
+            a = input('중복 번호를 삭제할까요?  (예/아니오) ')
+            if a  == '예':
+                result = list(dict.fromkeys(repeat_result))
+                print(result)
+            if a == '아니오':
+                print(repeat_result)
             again_stream_kor()
 
 # 옵션 실행
