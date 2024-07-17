@@ -10,6 +10,8 @@ restart = ""
 repeat = 0
 repeat_result = [] # 중복값 제거 X
 result = [] # 중복값 제거 O
+repeat_result_len = 0
+result_len = 0
 
 # 다시 뽑기 실행
 def again():
@@ -89,24 +91,36 @@ def stream():
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
+                repeat_result_len = len(repeat_result)
             a = input('Delete Duplicates? (y/n) ')
             if a  == 'y':
                 result = list(dict.fromkeys(repeat_result))
+                result_len = len(result)
                 print(result)
+                print('Picked Numbers:', repeat_result_len, 'Numbers')
+                print('Deleted Duplicates:', repeat_result_len - result_len, 'Numbers')
             if a == 'n':
                 print(repeat_result)
+                print('Picked Numbers:', repeat_result_len, 'Numbers')
             again_stream()
+            
         if student != 0:
+            repeat = 0
             repeat = int(input("Repeat Number? "))
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
+                repeat_result_len = len(repeat_result)
             a = input('Delete Duplicates? (y/n) ')
             if a  == 'y':
                 result = list(dict.fromkeys(repeat_result))
+                result_len = len(result)
                 print(result)
+                print('Picked Numbers:', repeat_result_len, 'Numbers')
+                print('Deleted Duplicates:', repeat_result_len - result_len, 'Numbers')
             if a == 'n':
                 print(repeat_result)
+                print('Picked Numbers:', repeat_result_len, 'Numbers')
             again_stream()
 
 # 옵션 실행
