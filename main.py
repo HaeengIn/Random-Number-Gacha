@@ -190,29 +190,41 @@ def stream_kor():
         global num
         global repeat
         if student == 0:
-            student = int(input("마지막 번호를 업력해주세요: "))
-            repeat = int(input("몇 번 뽑을까요? "))
+            student = int(input("마지막 번호를 입력해주세요: "))
+            repeat = int(input("몇 번 뽑을까요?  "))
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
+                repeat_result_len = len(repeat_result)
             a = input('중복 번호를 삭제할까요? (예/아니오) ')
             if a  == '예':
                 result = list(dict.fromkeys(repeat_result))
+                result_len = len(result)
                 print(result)
+                print('뽑힌 번호 개수:', repeat_result_len, '개')
+                print('삭제된 중복 번호 개수:', repeat_result_len - result_len, '개')
             if a == '아니오':
                 print(repeat_result)
+                print('뽑힌 번호 개수:', repeat_result_len, '개')
             again_stream_kor()
+
         if student != 0:
-            repeat = int(input("몇 번 뽑을까요? "))
+            repeat = 0
+            repeat = int(input("몇 번 뽑을까요?  "))
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
-            a = input('중복 번호를 삭제할까요?  (예/아니오) ')
+                repeat_result_len = len(repeat_result)
+            a = input('중복 번호를 삭제할까요? (예/아니오) ')
             if a  == '예':
                 result = list(dict.fromkeys(repeat_result))
+                result_len = len(result)
                 print(result)
+                print('뽑힌 번호 개수:', repeat_result_len, '개')
+                print('삭제된 중복 번호 개수:', repeat_result_len - result_len, '개')
             if a == '아니오':
                 print(repeat_result)
+                print('뽑힌 번호 개수:', repeat_result_len, '개')
             again_stream_kor()
 
 # 옵션 실행
