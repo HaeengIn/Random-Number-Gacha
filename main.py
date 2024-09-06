@@ -60,7 +60,7 @@ def main():
         web.open_new_tab('https://haeengin.netlify.app/gahca_help.html')
         main()
     if a == 'Wiki':
-        web.open_new_tab('https://messy-yak-716.notion.site/eb1af36a7775433397a863b76666010f?v=cbb371399a53481894c5043eb902d30a')
+        web.open_new_tab('https://bit.ly/h_gacha')
         main()
     if a == "한국어":
         main_kor()
@@ -264,7 +264,7 @@ def main_kor():
     if a == "옵션":
         options_kor()
     if a == '위키':
-        web.open_new_tab('https://messy-yak-716.notion.site/eb1af36a7775433397a863b76666010f?v=cbb371399a53481894c5043eb902d30a')
+        web.open_new_tab('https://bit.ly/h_gacha')
         main_kor()
     if a == "나가기":
         c = input("프로그램을 종료할까요?(예/아니오) ")
