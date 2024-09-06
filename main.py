@@ -273,11 +273,11 @@ def main_kor():
     if a == "English":
         main()
     if a == '도움말':
-        web.open_new_tab('https://haeengin.netlify.app/gacha_help.html')
+        web.open_new_tab('https://docs.google.com/document/d/1uTJ_CcZwjVotc079VKp-H8oWn0KryKNOM2E5vRGZ-gw/edit?usp=sharing')
     else:
         print("잘못된 입력값임니다")
         main_kor()
 
 # 메인 실행
 print("---Random Numbers---")
-main()
+main_kor()
