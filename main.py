@@ -37,7 +37,7 @@ def again_stream():
 
 # 메인 실행
 def main():
-    print("Start / Repeat / Options / Help / Exit / 한국어")
+    print("Start / Repeat / Options / Help / Wiki / Exit / 한국어")
     a = input()
     if a == "Start":
         run()
@@ -58,6 +58,10 @@ def main():
             print('Invalid Input')
     if a == 'Help':
         web.open_new_tab('https://haeengin.netlify.app/gahca_help.html')
+        main()
+    if a == 'Wiki':
+        web.open_new_tab('https://messy-yak-716.notion.site/eb1af36a7775433397a863b76666010f?v=cbb371399a53481894c5043eb902d30a')
+        main()
     if a == "한국어":
         main_kor()
     else:
@@ -251,7 +255,7 @@ def options_kor():
 
 # 메인 실행
 def main_kor():
-    print("시작 / 연속 / 옵션 / 도움말 / 나가기 / English")
+    print("시작 / 연속 / 옵션 / 도움말 / 위키 / 나가기 / English")
     a = input()
     if a == "시작":
         run_kor()
@@ -259,6 +263,9 @@ def main_kor():
         stream_kor()
     if a == "옵션":
         options_kor()
+    if a == '위키':
+        web.open_new_tab('https://messy-yak-716.notion.site/eb1af36a7775433397a863b76666010f?v=cbb371399a53481894c5043eb902d30a')
+        main_kor()
     if a == "나가기":
         c = input("프로그램을 종료할까요?(예/아니오) ")
         if c == "예":
@@ -274,6 +281,7 @@ def main_kor():
         main()
     if a == '도움말':
         web.open_new_tab('https://docs.google.com/document/d/1uTJ_CcZwjVotc079VKp-H8oWn0KryKNOM2E5vRGZ-gw/edit?usp=sharing')
+        main_kor()
     else:
         print("잘못된 입력값임니다")
         main_kor()
