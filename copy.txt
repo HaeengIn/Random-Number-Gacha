@@ -1,0 +1,1 @@
+pyinstaller -F --icon=icon.ico --version-file version.txt main.py
