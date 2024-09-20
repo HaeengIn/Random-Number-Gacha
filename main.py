@@ -76,7 +76,12 @@ def stream():
     while True:
         global student
         global num
-        global repeat
+        repeat = 0
+        repeat_result = [] # 중복값 제거 X
+        result = [] # 중복값 제거 O
+        repeat_result_len = 0
+        result_len = 0
+
         if student == 0:
             student = int(input("마지막 번호를 입력해주세요: "))
             repeat = int(input("몇 번 뽑을까요?  "))
@@ -97,7 +102,6 @@ def stream():
             again_stream()
 
         if student != 0:
-            repeat = 0
             repeat = int(input("몇 번 뽑을까요?  "))
             for x in range(repeat):
                 num = ran.randint(1, student)
