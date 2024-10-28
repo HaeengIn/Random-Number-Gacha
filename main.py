@@ -15,7 +15,7 @@ result_len = 0
 
 # 메인 실행
 def main():
-    print("시작 / 연속 / 옵션 / 도움말 / 위키 / 나가기")
+    print("시작 / 연속 / 옵션 / 도움말 / 위키 / 업데이트 / 나가기")
     a = input()
     if a == "시작":
         run()
@@ -39,6 +39,9 @@ def main():
             print("잘못된 입력값임니다")
     if a == '도움말':
         web.open_new_tab('https://docs.google.com/document/d/1uTJ_CcZwjVotc079VKp-H8oWn0KryKNOM2E5vRGZ-gw/edit?usp=sharing')
+        main()
+    if a == '업데이트':
+        web.open_new_tab('https://github.com/HaeengIn/Random-Number-Gacha/releases')
         main()
     else:
         print("잘못된 입력값임니다")
@@ -153,5 +156,6 @@ def options():
         options()
 
 # 메인 실행
-print("---Random Numbers---")
+print("[Random Number Gahca] v1.4.2")
+print("Copyright ⓒ HaeengIn. All Right Reserved.")
 main()
