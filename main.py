@@ -27,7 +27,7 @@ def main():
         web.open_new_tab('https://bit.ly/h_gacha')
         main()
     if a == "나가기":
-        c = input("프로그램을 종료할까요?(예/아니오) ")
+        c = input("프로그램을 종료할까요? (예/아니오) ")
         if c == "예":
             print("종료되었습니다.")
             print('창이 5초 후에 닫힙니다.')
@@ -36,7 +36,7 @@ def main():
         if c == "아니오":
             main()
         else:
-            print("잘못된 입력값임니다")
+            print("잘못된 입력값입니다")
     if a == '도움말':
         web.open_new_tab('https://docs.google.com/document/d/1uTJ_CcZwjVotc079VKp-H8oWn0KryKNOM2E5vRGZ-gw/edit?usp=sharing')
         main()
@@ -44,7 +44,7 @@ def main():
         web.open_new_tab('https://github.com/HaeengIn/Random-Number-Gacha/releases')
         main()
     else:
-        print("잘못된 입력값임니다")
+        print("잘못된 입력값입니다")
         main()
 
 # 랜덤 뽑기 실행
@@ -65,7 +65,7 @@ def run():
 
 # 다시 뽑기 실행
 def again():
-    restart = input("다시 뽑을까요?(예/아니오) ")
+    restart = input("다시 뽑을까요? (예/아니오) ")
     if restart == "예":
         run()
     if restart == "아니오":
@@ -124,7 +124,7 @@ def stream():
 
 # 다시 연속 뽑기 실행
 def again_stream():
-    restart = input("다시 뽑을까요?(예/아니오) ")
+    restart = input("다시 뽑을까요? (예/아니오) ")
     if restart == "예":
         stream()
     if restart == "아니오":
