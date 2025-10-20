@@ -16,7 +16,7 @@ result_len = 0
 # 메인 실행
 def main():
     print("시작 / 연속 / 옵션 / 도움말 / 위키 / 업데이트 / 나가기")
-    a = input()
+    a = input("> ")
     if a == "시작":
         run()
     if a == "연속":
@@ -27,7 +27,8 @@ def main():
         web.open_new_tab('https://bit.ly/h_gacha')
         main()
     if a == "나가기":
-        c = input("프로그램을 종료할까요? (예/아니오) ")
+        print("프로그램을 종료할까요? (예/아니오)")
+        c = input("> ")
         if c == "예":
             print("종료되었습니다.")
             print('창이 5초 후에 닫힙니다.')
@@ -54,7 +55,8 @@ def run():
         global num
         global restart
         if student == 0:
-            student = int(input("마지막 번호를 입력해주세요: "))
+            print("마지막 번호를 입력해주세요.")
+            student = int(input("> "))
             num = ran.randint(1, student)
             print(num)
             again()
@@ -65,7 +67,8 @@ def run():
 
 # 다시 뽑기 실행
 def again():
-    restart = input("다시 뽑을까요? (예/아니오) ")
+    print("다시 뽑을까요? (예/아니오)")
+    restart = input("> ")
     if restart == "예":
         run()
     if restart == "아니오":
@@ -86,13 +89,16 @@ def stream():
         result_len = 0
 
         if student == 0:
-            student = int(input("마지막 번호를 입력해주세요: "))
-            repeat = int(input("몇 번 뽑을까요?  "))
+            print("마지막 번호를 입력해주세요.")
+            student = int(input("> "))
+            print("몇 번 뽑을까요?")
+            repeat = int(input("> "))
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
                 repeat_result_len = len(repeat_result)
-            a = input('중복 번호를 삭제할까요? (예/아니오) ')
+            print("중복 번호를 삭제할까요? (예/아니오)")
+            a = input("> ")
             if a  == '예':
                 result = list(dict.fromkeys(repeat_result))
                 result_len = len(result)
@@ -105,12 +111,14 @@ def stream():
             again_stream()
 
         if student != 0:
-            repeat = int(input("몇 번 뽑을까요?  "))
+            print("몇 번 뽑을까요?")
+            repeat = int(input("> "))
             for x in range(repeat):
                 num = ran.randint(1, student)
                 repeat_result.append(num)
                 repeat_result_len = len(repeat_result)
-            a = input('중복 번호를 삭제할까요? (예/아니오) ')
+            print("중복 번호를 삭제할까요? (예/아니오)")
+            a = input("> ")
             if a  == '예':
                 result = list(dict.fromkeys(repeat_result))
                 result_len = len(result)
@@ -124,7 +132,8 @@ def stream():
 
 # 다시 연속 뽑기 실행
 def again_stream():
-    restart = input("다시 뽑을까요? (예/아니오) ")
+    print("다시 뽑을까요? (예/아니오)")
+    restart = input("> ")
     if restart == "예":
         stream()
     if restart == "아니오":
@@ -136,10 +145,11 @@ def again_stream():
 # 옵션 실행
 def options():
     print("수정 / 현황 / 메인으로")
-    b = input("")
+    b = input("> ")
     if b == "수정":
         global student
-        student = int(input("수정할 마지막 번호: "))
+        print("수정할 마지막 번호를 입력해주세요.")
+        student = int(input("> "))
         print("수정되었습니다")
         options()
     if b == "현황":
