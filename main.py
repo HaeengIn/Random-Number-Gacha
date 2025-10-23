@@ -166,6 +166,7 @@ def options():
         options()
 
 # 메인 실행
-print("[Random Number Gahca] v1.4.3")
+print("[Random Number Gacha] v1.4.3")
 print("Copyright ⓒ HaeengIn. All Right Reserved.")
+print("메뉴를 입력하여 작업을 시작하세요.")
 main()
